@@ -1,0 +1,12 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.service.provider.spi {
+    interface de.gematik.ti.epa.fdv.authentication.service.provider.spi.IAuthenticationProvider {
+        {abstract} + getDefaultAuthenticator()
+        {abstract} + getDescription()
+    }
+  }
+  
+
+@enduml

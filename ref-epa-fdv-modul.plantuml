@@ -1,0 +1,36 @@
+@startuml
+
+  component "ref-epa-fdv-modul" {
+        [ref-epa-fdv-modul.fdv.service.localization.api.main]
+        [ref-epa-fdv-modul.fdv.session.handler.main]
+        [ref-epa-fdv-modul.fdv.authentication.main]
+        [ref-epa-fdv-modul.fdv.authorization.main]
+        [ref-epa-fdv-modul.fdv.key.access.main]
+    component "ref-epa-fdv-modul.fdv.service.localization.api.main" {
+          [ref-epa-fdv-modul.fdv.service.localization.api]
+    }
+
+
+    component "ref-epa-fdv-modul.fdv.session.handler.main" {
+          [ref-epa-fdv-modul.fdv.session.handler]
+    }
+
+
+    component "ref-epa-fdv-modul.fdv.authentication.main" {
+          [ref-epa-fdv-modul.fdv.authentication]
+    }
+
+
+    component "ref-epa-fdv-modul.fdv.authorization.main" {
+          [ref-epa-fdv-modul.fdv.authorization]
+    }
+
+
+    component "ref-epa-fdv-modul.fdv.key.access.main" {
+          [ref-epa-fdv-modul.fdv.key.access]
+    }
+
+
+  }
+
+@enduml

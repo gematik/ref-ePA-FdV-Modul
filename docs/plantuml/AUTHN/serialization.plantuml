@@ -1,0 +1,63 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.serialization {
+      class de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils {
+          {static} - BEGIN_ASSERTION : String
+          {static} - END_ASSERTION : String
+          {static} - LOG : Logger
+          {static} + createDocFromRstr()
+          {static} + createDocumentFromString()
+          {static} + createLogoutRequest()
+          {static} + createRenewingRequest()
+          {static} + createRstrForLoginCreateToken()
+          {static} + createSecurityHeader()
+          {static} + extractAssertion()
+          {static} + extractChallengeValue()
+          {static} + nodeToString()
+          {static} + signDocument()
+          - AuthnSerializationUtils()
+          {static} - createBinarySecurityTokenProperty()
+          {static} - createPropertyInfo()
+          {static} - createSignatureProperty()
+          {static} - getDummyKeyPair()
+          {static} - setupSignatureAlgorithm()
+      }
+
+       class de.gematik.ti.epa.fdv.authentication.serialization.HeaderConverter {
+                {static} + convertToHeader()
+       }
+
+        interface de.gematik.ti.epa.fdv.authentication.serialization.IPreMarshalledXmlSerializable {
+        }
+
+        class de.gematik.ti.epa.fdv.authentication.serialization.KxmlSerializerWithPreMarshalledXmlWriter {
+                  - writer : Writer
+                  + setOutput()
+                  ~ writePreMarshalledXML()
+        }
+
+        class de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledElement {
+                  - preMarshalledXml : String
+                  + PreMarshalledElement()
+                  + setPreMarshalledXml()
+                  + write()
+        }
+        class de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledPrimitive {
+                  + PreMarshalledPrimitive()
+                  + write()
+        }
+
+
+
+  }
+
+
+de.gematik.ti.epa.fdv.authentication.serialization.HeaderConverter o-- de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledElement
+de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils o-- de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledPrimitive
+  de.gematik.ti.epa.fdv.authentication.serialization.KxmlSerializerWithPreMarshalledXmlWriter -up-|> org.kxml2.io.KXmlSerializer
+  de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledElement -up-|> org.kxml2.kdom.Element
+  de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledPrimitive .up.|> org.ksoap2.serialization.ValueWriter
+  de.gematik.ti.epa.fdv.authentication.serialization.PreMarshalledPrimitive -up-|> org.ksoap2.serialization.SoapPrimitive
+
+@enduml

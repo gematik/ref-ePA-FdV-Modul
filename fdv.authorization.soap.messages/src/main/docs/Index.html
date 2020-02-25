@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel='stylesheet' type='text/css' href='Styles/Blueprint_Styles/Style.css' />
+    <script src='Scripts/Blueprint_Scripts/Script.js' type='text/javascript'></script>
+    <title>EasyWSDL - Getting started</title>
+</head>
+<body>
+<h2>Getting started</h2>
+
+<ol>
+    <li>
+        <p>In your android/java project create a new package folder (name of this folder should match the Package name of generated classes)</p></li>
+    <li>
+        <p>Go to src subfolder of generated package and copy all files to your project (to newly created folder).</p></li>
+        <li>
+            <p>In libs subfolder you will find all jars needed for generated classes. Copy all jars to your project and add references to them (every IDE has different way of adding refenreces to external jars)</p></li>
+    <li>
+        <p>
+            Add INTERNET permission to your AndroidManifest.xml file
+            <br/>
+
+            &lt;uses-permission android:name=&quot;android.permission.INTERNET&quot;/&gt;
+        </p>
+    </li>
+    <li>
+        <p>
+            Use the following code to connect to your webservice:
+            <br/>
+            I_AuthorizationBinding service = new I_AuthorizationBinding();<br/>
+            service.MethodToInvoke(...);
+        </p>
+    </li>
+</ol>
+
+<div class="warningBox" style="width: auto">
+    <h3>Warning: I got compilation error: com.android.dex.DexException: Multiple dex files define Lorg/kobjects/...</h3>
+    <p>
+        This problem occures when you have many copies of ksoap2.jar added as dependencies in your project. For Premium account we add ExKsoap2.jar library which already has ksoap2.jar. Sometimes this causes conflicts.
+        In this case should add ExKsoap2.jar only to your dependencies (without ksoap2.jar). If you added both ExKsoap2.jar and Ksoap.jar libs, then you can have this issue. <strong>To solve it, please remove Ksoap2.jar from dependencies</strong>.
+    </p>
+</div>
+<h3>Your main service classes</h3>
+<ul>
+        <li><a href="Html/I_AuthorizationBinding.html">I_AuthorizationBinding (SOAP Version: 1.2)</a></li>
+        <li><a href="Html/I_Authorization_ManagementBinding.html">I_Authorization_ManagementBinding (SOAP Version: 1.2)</a></li>
+        <li><a href="Html/I_Authorization_InsurantBinding.html">I_Authorization_InsurantBinding (SOAP Version: 1.2)</a></li>
+        <li><a href="Html/I_Authorization_Management_InsurantBinding.html">I_Authorization_Management_InsurantBinding (SOAP Version: 1.2)</a></li>
+</ul>
+
+<h3>Other topics</h3>
+<ul>
+    <li><a href="Html/MTOMTransfer.html">MTOM Transfer</a></li>
+    <li><a href="Html/Tips.html#basicAuthentication">Basic authentication</a></li>
+    <li><a href="Html/Tips.html#anyCollection">How to use any collection?</a></li>
+    <li><a href="Html/Tips.html#bestPractices">Best practices</a></li>
+    <li><a href="Html/Tips.html#cookieManagement">Cookie management</a></li>
+</ul>
+</body>
+</html>
+

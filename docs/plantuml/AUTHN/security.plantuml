@@ -1,0 +1,48 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.security {
+      class de.gematik.ti.epa.fdv.authentication.security.CertificateUtil {
+          {static} + getCertificate()
+          {static} + getCommonName()
+          {static} + getSurnameGivenName()
+          - CertificateUtil()
+          {static} - getFieldsFormCertificate()
+          {static} - getFirstFieldFormCertificate()
+    }
+
+    class de.gematik.ti.epa.fdv.authentication.security.ExtendedDigesterOutputStream {
+              ~ bos : ByteArrayOutputStream
+              + ExtendedDigesterOutputStream()
+              + getBos()
+              + write()
+              + write()
+    }
+
+    enum Namespaces {
+            base64Encoding
+            binarySecurityTokenProfile
+            cancelToken
+            createToken
+            ds
+            ecdsa
+            enc
+            renewToken
+            rsaMfg1
+            saml2
+            saml2TokenProfile
+            trust
+            wsse
+            wsu
+            x509TokenProfile
+            xml
+            xsd
+            xsi
+            url
+    }
+
+  }
+
+  de.gematik.ti.epa.fdv.authentication.security.ExtendedDigesterOutputStream -up-|> org.apache.xml.security.utils.DigesterOutputStream
+
+@enduml

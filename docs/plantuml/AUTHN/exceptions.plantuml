@@ -1,0 +1,17 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.authentication.exceptions {
+      class de.gematik.ti.epa.fdv.authentication.exceptions.AuthenticateException {
+          + AuthenticateException()
+      }
+
+      class de.gematik.ti.epa.fdv.authentication.exceptions.XmlCanonicalizeException {
+                {static} - serialVersionUID : long
+                + XmlCanonicalizeException()
+      }
+  }
+
+  de.gematik.ti.epa.fdv.authentication.exceptions.AuthenticateException -up-|> java.lang.RuntimeException
+  de.gematik.ti.epa.fdv.authentication.exceptions.XmlCanonicalizeException -up-|> java.lang.RuntimeException
+
+@enduml

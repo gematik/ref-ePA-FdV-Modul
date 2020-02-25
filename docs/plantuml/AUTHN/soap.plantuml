@@ -1,0 +1,61 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.soap {
+      class de.gematik.ti.epa.fdv.authentication.soap.BinarySecurityTokenTypeWithId {
+          + id : String
+          {static} - serialVersionUID : long
+          + getSimpleValue()
+      }
+
+      class de.gematik.ti.epa.fdv.authentication.soap.ExpandedSoapSerializationEnvelope {
+                      {static} - BODY : String
+                      {static} - ENC : String
+                      {static} - ENVELOPE : String
+                      {static} - HEADER : String
+                      {static} - SAML2 : String
+                      {static} - WSU : String
+                      {static} - XML : String
+                      {static} - XSD : String
+                      {static} - XSI : String
+                      - uuid : UUID
+                      + ExpandedSoapSerializationEnvelope()
+                      + setUuid()
+                      + write()
+                      - setNSPrefix()
+      }
+
+      class de.gematik.ti.epa.fdv.authentication.soap.SignatureInfoSignature {
+                - signatureInfoDigest : byte[]
+                - signedInfoString : String
+                + SignatureInfoSignature()
+                + getSignatureInfoDigest()
+                + getSignedInfoString()
+      }
+
+      class de.gematik.ti.epa.fdv.authentication.soap.SignatureTypeWithSignedInfoString {
+                + signedInfoString : String
+                {static} - serialVersionUID : long
+                + getProperty()
+     }
+
+     class de.gematik.ti.epa.fdv.authentication.soap.SignatureTypeWithSignedInfoString.PreMarshalledSignedInfo {
+               - preMarshalledSignedInfo : String
+               + toString()
+               ~ PreMarshalledSignedInfo()
+     }
+
+     class de.gematik.ti.epa.fdv.authentication.soap.ExtendedSignatureValueType {
+               {static} - serialVersionUID : long
+               + getSimpleValue()
+     }
+
+  }
+  
+
+
+  de.gematik.ti.epa.fdv.authentication.soap.SignatureTypeWithSignedInfoString +-down- de.gematik.ti.epa.fdv.authentication.soap.SignatureTypeWithSignedInfoString.PreMarshalledSignedInfo
+  de.gematik.ti.epa.fdv.authentication.soap.SignatureTypeWithSignedInfoString.PreMarshalledSignedInfo .up.|> de.gematik.ti.epa.fdv.authentication.serialization.IPreMarshalledXmlSerializable
+
+
+@enduml

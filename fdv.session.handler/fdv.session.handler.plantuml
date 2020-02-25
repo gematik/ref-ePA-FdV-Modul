@@ -1,0 +1,15 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.session.handler {
+    class de.gematik.ti.epa.fdv.session.handler.ServiceLocalizerLoader {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.session.handler {
+    class de.gematik.ti.epa.fdv.session.handler.ServiceLocalizerLoaderTest {
+    }
+  }
+
+@enduml

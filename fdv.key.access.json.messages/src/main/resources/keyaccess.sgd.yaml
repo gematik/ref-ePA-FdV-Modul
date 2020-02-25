@@ -1,0 +1,83 @@
+openapi: 3.0.1
+info:
+  version: 1.0.0
+  title:  ePA KeyAccess
+  description: REST Schnittstelle der SGD Server für den Keyaccess
+  license:
+    name: APACHE LICENSE, VERSION 2.0
+    url: 'https://www.apache.org/licenses/LICENSE-2.0.txt'
+servers:
+  - url: http://gltu1119.mgm1.telematik-test:9099/#/
+paths:
+  /sgd1:
+    post:
+      summary: List all from aktorServer/SGD1 inclusive PublicEciesKey
+      operationId: listEciesKeySgd1
+      tags:
+        - getKeySgd1
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/definitions/RequestBody'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/definitions/SgdResponse'
+  /sgd2:
+    post:
+      summary: List all response from aktorServer/SGD2 inclusive PublicEciesKey
+      operationId: listEciesKeySgd2
+      tags:
+        - getKeySgd2
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/definitions/RequestBody'
+      responses:
+        default:
+          description: default response
+          content:
+            application/json:
+              schema:
+                $ref: '#/definitions/SgdResponse'
+components:
+  schemas:
+    SgdResponse:
+      required:
+        - Signature
+        - Certificate
+        - PublicKeyECIES
+      properties:
+        Signature:
+          type: string
+        Certificate:
+          type: string
+        PublicKeyECIES:
+          type: string
+    Error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+    RequestBody:
+      required:
+        - Command
+        - Certificate
+        - OCSPResponse
+      properties:
+        Command:
+          type: string
+        Certificate:
+          type: string
+        OCSPResponse:
+          type: string

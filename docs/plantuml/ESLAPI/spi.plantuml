@@ -1,0 +1,12 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.service.localization.spi {
+    interface de.gematik.ti.epa.fdv.service.localization.spi.IServiceLocalizer {
+        {abstract} + endpointURLForInterface()
+        {abstract} + getLookupStatus()
+        {abstract} + lookup()
+        {abstract} + getHomeCommunityId()
+    }
+  }
+
+@enduml

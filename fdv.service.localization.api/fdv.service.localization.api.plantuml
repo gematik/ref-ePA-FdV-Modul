@@ -1,0 +1,20 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.service.localization.api {
+    enum LookupStatus {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.service.localization.api {
+    enum ServiceInterfaceName {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.service.localization.spi {
+    interface de.gematik.ti.epa.fdv.service.localization.spi.IServiceLocalizer {
+    }
+  }
+
+@enduml

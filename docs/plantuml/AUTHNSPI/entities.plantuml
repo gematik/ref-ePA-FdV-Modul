@@ -1,0 +1,45 @@
+@startuml
+
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.service.provider.api {
+    namespace entities {
+      class de.gematik.ti.epa.fdv.authentication.service.provider.api.entities.AuthenticationResult {
+          {static} + DEFAULTRESULT : AuthenticationResult
+          - authState : AuthenticationState
+          - hashValue : byte[]
+          - rawSignData : byte[]
+          + AuthenticationResult()
+          + getAuthState()
+          + getHashValue()
+          + getRawSignData()
+          + setAuthState()
+          + setHashValue()
+          + setRawSignData()
+          + toString()
+      }
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.authentication.service.provider.api {
+    namespace entities {
+      enum AuthenticationState {
+        AUTH_FAILED
+        AUTH_SUCCEED
+      }
+    }
+  }
+  
+
+  de.gematik.ti.epa.fdv.authentication.service.provider.api.entities.AuthenticationResult .up.|> IAuthenticationResult
+
+
+
+
+
+
+
+
+
+@enduml

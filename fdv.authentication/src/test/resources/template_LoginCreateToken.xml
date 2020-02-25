@@ -1,0 +1,24 @@
+<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope"
+               xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+    <soap:Header>
+        <wsse:Security xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+                       xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" soap:mustUnderstand="true">
+            <!-- BinarySecurityToken and Signature are added by preprocessor step -->
+        </wsse:Security>
+        <Action xmlns="http://www.w3.org/2005/08/addressing">http://docs.oasis-open.org/ws-sx/ws-trust/200512/RSTR/ChallengeFinal</Action>
+        <MessageID xmlns="http://www.w3.org/2005/08/addressing">urn:uuid:dd08a924-fa83-4ce5-b6b9-b9ffd29cfda8</MessageID>
+        <To xmlns="http://www.w3.org/2005/08/addressing">https://${AktorServerIP}:9094/authn/I_Authentication_Insurant</To>
+        <ReplyTo xmlns="http://www.w3.org/2005/08/addressing">
+            <Address>http://www.w3.org/2005/08/addressing/anonymous</Address>
+        </ReplyTo>
+    </soap:Header>
+    <soap:Body xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" wsu:Id="id-7488f32a-fe3f-406b-9f7e-17b5156308a6">
+        <RequestSecurityTokenResponse xmlns="http://docs.oasis-open.org/ws-sx/ws-trust/200512">
+            <SignChallengeResponse>
+                <Challenge>
+                    581NwlXYLCxEej6JNeC1dj91HGGdO7jAp5p_gchuxbky8CNTS6hfF5VsVbtygPEnsxxbeuc38wFLZ2CBgtQQHRgYTvS-l_Tl_fx2kiI0SRdtQkXg_mEqEIaWpe5N7PkIoZCey_B3NshUUiWR2Vlyone5aCjCdgeZRJ71BDwwUadIjxiA6ySagtEuzEU82wwTBYXiAtP2iWZKLREyadOCrsLCVw4NcEO3JrXF1beDvjw-AcKp0YHNrgZm6jwqFyeCtWSrWQBMa3fTjTOxWb33y6EPiEdReqtPl3yomYBlymGoZGn1seAULXbArYLDqYPz3ERLnqGahMivjetLZneyGA==
+                </Challenge>
+            </SignChallengeResponse>
+        </RequestSecurityTokenResponse>
+    </soap:Body>
+</soap:Envelope>

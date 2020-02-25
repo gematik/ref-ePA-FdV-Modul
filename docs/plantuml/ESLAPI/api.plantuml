@@ -1,0 +1,32 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.service.localization.api {
+    enum LookupStatus {
+      ERROR
+      IN_PROGRESS
+      NOT_STARTED
+      MISSING_TXT_RECORD
+      SUCCESS
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.service.localization.api {
+    enum ServiceInterfaceName {
+      IAccountManagementInsurant
+      IAuthenticationInsurant
+      IAuthorizationInsurant
+      IAuthorizationManagementInsurant
+      IDocumentManagementConnect
+      IDocumentManagementInsurant
+      IGetKeySgd1
+      IGetKeySgd2
+      IOCSPStatusInformation
+      IProxyDirectoryQuery
+      moduleName
+      serviceLocatorName
+    }
+  }
+
+
+@enduml

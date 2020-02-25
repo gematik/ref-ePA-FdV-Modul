@@ -1,0 +1,29 @@
+ifndef::globalConfig[]
+:globalConfig: true
+:useCachePlantuml: true
+// asciidoc settings for EN (English)
+// ==================================
+
+
+:toc-title: Table of Contents
+
+// enable table-of-contents
+:toc:
+:toclevels: 4
+
+:classdia-caption: Class diagram
+:seqdia-caption: Sequence diagram
+
+:source-highlighter: prettify
+
+// where are images located?
+:imagesdir: docs/images
+:imagesoutdir: docs/images/
+:testdir: ../../src/test/java/de/gematik/ti
+:sourcedir: /src/main/java/de/gematik/ti
+:plantumldir: ../plantuml
+
+
+
+
+endif::globalConfig[]

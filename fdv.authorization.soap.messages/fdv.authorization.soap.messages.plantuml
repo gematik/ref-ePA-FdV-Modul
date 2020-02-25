@@ -1,0 +1,1596 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AD {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ADXP {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ANY {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ANYNonNull {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ActionType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ActiveParticipantType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AdviceType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AgreementMethodType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AssertionType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AttributeStatementType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AttributeType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AudienceRestrictionType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuditMessage {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuditMessage_ActiveParticipant {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuditSourceIdentificationType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuthnContextType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuthnStatementType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuthorizationInfoType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuthorizationKeyType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.AuthzDecisionStatementType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.BIN {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.BL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.BN {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.BXIT_CD {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.BXIT_IVL_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.BaseIDAbstractType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CD {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CDAType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CE {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CO {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CR {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CV {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CanonicalizationMethodType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CheckRecordExists {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CheckRecordExistsResponse {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CipherDataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CipherReferenceType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.CodedValueType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ConditionAbstractType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ConditionsType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.DHKeyValueType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.DSAKeyValueType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.DeleteAuthorizationKey {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.DeviceIdType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.DigestMethodType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.DischargeLetterContainerType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ED {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EIVL_PPD_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EIVL_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EIVL_x002E_event {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EN {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ENXP {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptedDataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptedElementType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptedKeyContainerType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptedKeyType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptedType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptionMethodType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptionPropertiesType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EncryptionPropertyType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Enums {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Error {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Error_Trace {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Error_Trace_Detail {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EventIdentificationType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.EvidenceType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ExtendedSoapSerializationEnvelope {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Functions {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GLIST_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GLIST_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GetAuditEvents {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GetAuditEventsResponse {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationKey {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationKeyResponse {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationList {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationListResponse {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.HXIT_CE {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.HXIT_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Helper {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.II {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.INT {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    interface de.gematik.ti.epa.fdv.gen.authorization.IServiceEvents {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_INT {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_MO {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_PPD_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_PPD_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_REAL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVL_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_INT {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_MO {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_PPD_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_PPD_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_REAL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.IVXB_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.I_AuthorizationBinding {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.I_Authorization_InsurantBinding {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.I_Authorization_ManagementBinding {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.I_Authorization_Management_InsurantBinding {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.InsurantIdType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.KeyInfoConfirmationDataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.KeyInfoType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.KeyType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.KeyValueType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.Kostentraeger {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.LandType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.MO {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ManifestType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.MarshalGuid {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.NameIDType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ON {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ObjectType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.OneTimeUseType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.OperationResult {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PGPDataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PHRKeyType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PIVL_PPD_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PIVL_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PN {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PPD_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PPD_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PQR {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ParticipantObjectIdentificationType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ProxyRestrictionType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PutAuthorizationKey {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.PutNotificationInfo {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.QTY {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.REAL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RSAKeyValueType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RTO {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RTO_MO_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RTO_PQ_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RTO_QTY_QTY {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RecordIdentifierType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RecordStateType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ReferenceList {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ReferenceType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ReferenceType_1 {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ReplaceAuthorizationKey {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.RetrievalMethodType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SC {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SLIST_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SLIST_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SPKIDataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.ST {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_CD {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_INT {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_MO {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_PPD_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_PPD_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_PQ {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_REAL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXCM_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SXPR_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SignatureMethodType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SignaturePropertiesType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SignaturePropertyType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SignatureType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SignatureValueType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SignedInfoType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.StatementAbstractType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SubjectConfirmationDataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SubjectConfirmationType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SubjectLocalityType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.SubjectType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TEL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TN {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TransformType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TransformsType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TransformsType_1 {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.TypeValuePairType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Versicherungsschutz {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Versicherungsschutz_Kostentraeger {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos_ZusatzinfosGKV {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos_ZusatzinfosGKV_Zusatzinfos_Abrechnung_GK {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos_ZusatzinfosGKV_Zusatzinfos_Abrechnung_GK_1 {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML_RuhenderLeistungsanspruch {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML_Selektivvertraege {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML_Zuzahlungsstatus {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter_Person {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter_Person_PostfachAdresse {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter_Person_StrassenAdresse {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.URL {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.UVP_TS {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.X509DataType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.X509IssuerSerialType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_additionalLocator {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_buildingNumberSuffix {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_careOf {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_censusTract {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_city {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_country {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_county {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_delimiter {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryAddressLine {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryInstallationArea {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryInstallationQualifier {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryInstallationType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryMode {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryModeIdentifier {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_direction {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_houseNumber {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_houseNumberNumeric {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_postBox {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_postalCode {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_precinct {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_state {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetAddressLine {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetName {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetNameBase {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetNameType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_unitID {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_unitType {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.en_x002E_delimiter {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.en_x002E_family {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.en_x002E_given {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.en_x002E_prefix {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.en_x002E_suffix {
+    }
+  }
+  
+
+  namespace de.gematik.ti.epa.fdv.gen.authorization {
+    class de.gematik.ti.epa.fdv.gen.authorization.thumbnail {
+    }
+  }
+  
+
+  de.gematik.ti.epa.fdv.gen.authorization.AD .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ADXP .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ANY .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ANYNonNull .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ActiveParticipantType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AdviceType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AgreementMethodType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AssertionType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AttributeStatementType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AttributeType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AudienceRestrictionType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuditMessage .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuditMessage_ActiveParticipant .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuditSourceIdentificationType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuthnContextType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuthnStatementType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuthorizationInfoType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuthorizationKeyType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.AuthzDecisionStatementType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.BIN .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.BL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.BN .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.BXIT_CD .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.BXIT_IVL_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.BaseIDAbstractType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CD .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CE .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CO .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CR .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CV .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CanonicalizationMethodType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CheckRecordExists .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CheckRecordExistsResponse .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CipherDataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CipherReferenceType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.CodedValueType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ConditionAbstractType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ConditionsType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.DHKeyValueType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.DSAKeyValueType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.DeleteAuthorizationKey .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.DeviceIdType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.DigestMethodType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.DischargeLetterContainerType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ED .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EIVL_PPD_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EIVL_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EIVL_x002E_event .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EN .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ENXP .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptedDataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptedElementType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptedKeyContainerType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptedKeyType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptedType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptionMethodType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptionPropertiesType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EncryptionPropertyType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.Error .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.Error_Trace .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EventIdentificationType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.EvidenceType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GLIST_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GLIST_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuditEvents .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuditEventsResponse .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuditEventsResponse -up-|> java.util.Vector
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationKey .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationKeyResponse .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationList .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.GetAuthorizationListResponse .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.HXIT_CE .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.HXIT_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.II .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.INT .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_INT .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_MO .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_PPD_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_PPD_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_REAL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVL_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_INT .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_MO .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_PPD_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_PPD_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_REAL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.IVXB_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.InsurantIdType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.KeyInfoConfirmationDataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.KeyInfoType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.KeyValueType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.Kostentraeger .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.LandType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.MO .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ManifestType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.MarshalGuid .up.|> Marshal
+  de.gematik.ti.epa.fdv.gen.authorization.ON .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ObjectType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.OneTimeUseType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.OperationResult o-- T : Result
+  de.gematik.ti.epa.fdv.gen.authorization.PGPDataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PHRKeyType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PIVL_PPD_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PIVL_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PN .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PPD_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PPD_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PQR .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ParticipantObjectIdentificationType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ProxyRestrictionType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PutAuthorizationKey .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.PutNotificationInfo .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.QTY .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.REAL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RSAKeyValueType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RTO .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RTO_MO_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RTO_PQ_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RTO_QTY_QTY .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RecordIdentifierType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RecordStateType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ReferenceList .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ReferenceType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ReferenceType_1 .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ReplaceAuthorizationKey .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.RetrievalMethodType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SC .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SLIST_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SLIST_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SPKIDataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.ST .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_CD .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_INT .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_MO .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_PPD_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_PPD_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_PQ .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_REAL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXCM_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SXPR_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SignatureMethodType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SignaturePropertiesType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SignaturePropertyType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SignatureType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SignedInfoType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.StatementAbstractType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SubjectConfirmationDataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SubjectConfirmationType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SubjectLocalityType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.SubjectType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TEL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TN .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TransformType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TransformsType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TransformsType -up-|> java.util.Vector
+  de.gematik.ti.epa.fdv.gen.authorization.TransformsType_1 .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.TransformsType_1 -up-|> java.util.Vector
+  de.gematik.ti.epa.fdv.gen.authorization.TypeValuePairType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Versicherungsschutz .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Versicherungsschutz_Kostentraeger .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos_ZusatzinfosGKV .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos_ZusatzinfosGKV_Zusatzinfos_Abrechnung_GK .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_AllgemeineVersicherungsdatenXML_Versicherter_Zusatzinfos_ZusatzinfosGKV_Zusatzinfos_Abrechnung_GK_1 .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML_RuhenderLeistungsanspruch .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML_Selektivvertraege .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_GeschuetzteVersichertendatenXML_Zuzahlungsstatus .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter_Person .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter_Person_PostfachAdresse .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UC_PersoenlicheVersichertendatenXML_Versicherter_Person_StrassenAdresse .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.URL .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.UVP_TS .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.X509DataType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.X509IssuerSerialType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_additionalLocator .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_buildingNumberSuffix .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_careOf .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_censusTract .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_city .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_country .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_county .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_delimiter .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryAddressLine .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryInstallationArea .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryInstallationQualifier .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryInstallationType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryMode .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_deliveryModeIdentifier .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_direction .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_houseNumber .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_houseNumberNumeric .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_postBox .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_postalCode .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_precinct .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_state .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetAddressLine .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetName .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetNameBase .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_streetNameType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_unitID .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.adxp_x002E_unitType .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.en_x002E_delimiter .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.en_x002E_family .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.en_x002E_given .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.en_x002E_prefix .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.en_x002E_suffix .up.|> KvmSerializable
+  de.gematik.ti.epa.fdv.gen.authorization.thumbnail .up.|> KvmSerializable
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.session.handler {
+    class de.gematik.ti.epa.fdv.session.handler.ServiceLocalizerLoader {
+        {static} - instance : ServiceLocalizerLoader
+        {static} + getInstance()
+        + getServices()
+        + serviceLocalizerAvailable()
+        - ServiceLocalizerLoader()
+    }
+  }
+  
+
+@enduml

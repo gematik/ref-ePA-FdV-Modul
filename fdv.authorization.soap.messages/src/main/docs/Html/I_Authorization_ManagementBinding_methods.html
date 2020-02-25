@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>I_Authorization_ManagementBinding methods</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/github.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel='stylesheet' type='text/css' href='../Styles/Blueprint_Styles/Style.css' />
+    <script src='../Scripts/Blueprint_Scripts/Script.js' type='text/javascript'></script>
+    <style type="text/css">
+        .syntaxhighlighter {
+            overflow-y: hidden !important;
+            overflow-x: auto !important;
+        }
+    </style>
+</head>
+<body>
+        <h2 id="PutAuthorizationKey">PutAuthorizationKey</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import de.gematik.ti.epa.fdv.gen.authz;
+...
+AuthorizationKeyType param0 = new AuthorizationKeyType();
+RecordIdentifierType param1 = new RecordIdentifierType();
+DeviceIdType param2 = new DeviceIdType();
+String param3 = ...;//initialization code
+
+
+I_Authorization_ManagementBinding service = new I_Authorization_ManagementBinding("http://unspecified");
+java.lang.Object res = service.PutAuthorizationKey(param0,param1,param2,param3);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+        <br />
+        <br />
+        <h2 id="CheckRecordExists">CheckRecordExists</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import de.gematik.ti.epa.fdv.gen.authz;
+...
+InsurantIdType param0 = new InsurantIdType();
+
+
+I_Authorization_ManagementBinding service = new I_Authorization_ManagementBinding("http://unspecified");
+RecordStateType res = service.CheckRecordExists(param0);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+        <br />
+        <br />
+        <h2 id="GetAuthorizationList">GetAuthorizationList</h2>
+        <p>
+            
+        </p>
+        <h4>Synchronous operation</h4>
+        <pre>
+        <code class="java">
+import de.gematik.ti.epa.fdv.gen.authz;
+...
+RecordIdentifierType param0 = new RecordIdentifierType();
+DeviceIdType param1 = new DeviceIdType();
+
+
+I_Authorization_ManagementBinding service = new I_Authorization_ManagementBinding("http://unspecified");
+GetAuthorizationListResponse res = service.GetAuthorizationList(param0,param1);
+//in res variable you have a value returned from your web service
+            </code>
+</pre>
+        <br />
+        <br />
+</body>
+</html>
+

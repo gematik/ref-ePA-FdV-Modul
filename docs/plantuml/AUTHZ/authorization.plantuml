@@ -1,0 +1,21 @@
+@startuml
+
+
+
+  namespace de.gematik.ti.epa.fdv.authorization {
+    class de.gematik.ti.epa.fdv.authorization.DummyClass {
+        + doSome()
+    }
+  }
+  
+
+
+
+
+
+
+
+
+
+
+@enduml

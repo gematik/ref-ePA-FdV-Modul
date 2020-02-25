@@ -1,0 +1,27 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.states {
+      enum CreateChallengeState {
+        LOGIN_CREATE_CHALLENGE_FAILED
+        LOGIN_CREATE_CHALLENGE_SUCCESS
+      }
+
+      enum CreateTokenState {
+              LOGIN_CREATE_TOKEN_FAILED
+              LOGIN_CREATE_TOKEN_SUCCESS
+      }
+
+      enum RenewTokenState {
+              RENEW_TOKEN_SUCCESS
+              UNABLE_TO_RENEW
+      }
+
+      enum LogoutTokenState {
+              LOGOUT_TOKEN_FAILED
+              LOGOUT_TOKEN_SUCCESS
+       }
+
+  }
+
+@enduml

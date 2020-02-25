@@ -1,0 +1,28 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.authentication.event {
+
+      class de.gematik.ti.epa.fdv.authentication.event.AuthnProviderSelectionProvider {
+          - queue : ArrayBlockingQueue<IAuthenticator>
+          + call()
+          + handleSelectedAuthnProvider()
+      }
+
+      interface de.gematik.ti.epa.fdv.authentication.event.IAuthnProviderSelectionListener {
+                {abstract} + handleSelectedAuthnProvider()
+      }
+
+      class de.gematik.ti.epa.fdv.authentication.event.RequestSelectAuthenticatorEvent {
+                - listAuthn : List<IAuthenticator>
+                + RequestSelectAuthenticatorEvent()
+                + RequestSelectAuthenticatorEvent()
+                + getListAuthn()
+                + getListener()
+      }
+  }
+
+  de.gematik.ti.epa.fdv.authentication.event.AuthnProviderSelectionProvider .up.|> de.gematik.ti.epa.fdv.authentication.event.IAuthnProviderSelectionListener
+  de.gematik.ti.epa.fdv.authentication.event.AuthnProviderSelectionProvider .up.|> java.util.concurrent.Callable
+  de.gematik.ti.epa.fdv.authentication.event.RequestSelectAuthenticatorEvent o-- de.gematik.ti.epa.fdv.authentication.event.IAuthnProviderSelectionListener : listner
+
+@enduml

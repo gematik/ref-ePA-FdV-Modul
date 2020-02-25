@@ -1,0 +1,248 @@
+include::config.adoc[]
+
+== Overview
+
+The FdV module bundles libraries that provide the functions (service localization, authentication, authorization, session handling, key access) necessary for the use of the electronic patient record.
+
+ifndef::useCachePlantuml[]
+
+.FdV Modul overview
+[plantuml,generated/ref-epa-fdv-modul,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/ref-epa-fdv-modul.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+.FdV Modul overview
+image::generated/ref-epa-fdv-modul.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+=== FdV Authentication
+
+The authentication module provides the functionalities for authenticating the user to use the electronic patient record.
+All available IAuthenticator and the selected one will be returned by the AuthnService.
+The Authn class enforces required operations (login create challenge / login create token / renew token / logout token) according to ws-Trust to authenticate the user.
+The AuthenticationBindingSoap class forms the entry point for establishing the connection to the authentication web service.
+
+ifndef::useCachePlantuml[]
+
+.FdV Authentication structure
+[plantuml,authn/generated/authentication,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/AUTHN/authentication.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+.FdV Authentication structure
+image::authn/generated/authentication.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+=== FdV Authorization
+
+The authorization module is not yet implemented
+ifndef::useCachePlantuml[]
+
+.ePA Authorization structure
+[plantuml,authz/generated/authorization,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/AUTHZ/authorization.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+.ePA Authorization structure
+image::authz/generated/authorization.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+=== FdV Key Access
+
+The key access module is not yet implemented
+
+ifndef::useCachePlantuml[]
+
+.ePA Key Access structure
+[plantuml,eka/generated/access,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/EKA/access.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+.ePA Key Access structure
+image::eka/generated/access.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+=== FdV Session Handler
+
+The FdV SessionHandler module provides a ServiceLocalizerLoader for available service localization services.
+ifndef::useCachePlantuml[]
+
+.FdV Session Handler structure
+[plantuml,esh/generated/handler,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/ESH/handler.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+
+.FdV Session Handler structure
+image::esh/generated/handler.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+=== Service Localization API
+
+ifndef::useCachePlantuml[]
+
+.ePA Service Localization API
+[plantuml,ESLAPI/generated/api,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/ESLAPI/api.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+
+.ePA Service Localization API
+image::elsapi/generated/api.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+==== IService Localizer
+// tag::IServiceLocalizer[]
+Interface to be implemented by service localizer as entry point to localize ePA service components.
+Start lookup DNS for retrieving endpoint URLs of various ePA gateway services.
+Once lookup has been done successfully, endpoint URLs for interfaces in ServiceInterfaceName can be retrieved.
+
+ifndef::useCachePlantuml[]
+
+.IServiceLocalizer
+[plantuml,ESLAPI/generated/spi,png,caption="{classdia-caption} {counter:class}: "]
+----
+include::{plantumldir}/ESLAPI/spi.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+
+.IServiceLocalizer
+image::elsapi/generated/spi.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+
+The specific service localization needs a descriptor behind `YOUR.service.localization\src\main\resources\META-INF\services` with filename
+`de.gematik.ti.fdv.epa.service.localization.spi.IServiceLocalizer` and the content of the package and class which implements the service localizer interface e.g. `de.gematik.ti.fdv.epa.service.localization.ServiceLocator`
+
+.File META-INF services
+image::eslapi/generated/MetaInfServices.png[caption="{figure-caption} {counter:figure}: "]
+
+==== ServiceInterfaceName
+// tag::ServiceInterfaceName[]
+Description of the service interfaces and assignments of paths to the ePA file system components
+// end::ServiceInterfaceName[]
+
+==== LookupStatus
+// tag::LookupStatus[]
+Status of service lookup in DNS - As long as the Service lookup is running, thus it might still in progress after ServiceLocatorType object has been initialized, or lookup was not successful for some reason, e.g. DNS was not accessible
+
+ifndef::useCachePlantuml[]
+
+.ServiceInterfaceName / LookupStatus
+[plantuml,eslapi/generated/api,png,caption="{classdia-caption} {counter:class}: "]
+----
+include::{plantumldir}/ESLAPI/api.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+
+.ServiceInterfaceName / LookupStatus
+image::eslapi/generated/api.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+// end::LookupStatus[]
+
+=== Authentication Service Provider
+
+ifndef::useCachePlantuml[]
+
+.ePA Authentication Service Provider
+[plantuml,authnspi/generated/fdv.authentication.service.provider,png,caption="{classdia-caption} {counter:class}: ",650]
+----
+include::{plantumldir}/AUTHNSPI/fdv.authentication.service.provider.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+
+.ePA Authentication Service Provider
+image::AUTHNSPI/generated/fdv.authentication.service.provider.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+
+=== Authentication Service Provider Interface
+// tag::ServiceProvider[]
+
+The entry point for the ServiceLoader is the Authentication Service Provider Interface.
+This Interface returns the specific authentication provider implementation and a provider description.
+
+ifndef::useCachePlantuml[]
+
+.IAuthenticationProvider
+[plantuml,AUTHNSPI/generated/spi,png,caption="{classdia-caption} {counter:class}: "]
+----
+include::{plantumldir}/AUTHNSPI/spi.plantuml[]
+----
+
+endif::useCachePlantuml[]
+ifdef::useCachePlantuml[]
+
+
+.IAuthenticationProvider
+image::AUTHNSPI/generated/spi.png[caption="{classdia-caption} {counter:class}: "]
+
+{empty} +
+
+endif::useCachePlantuml[]
+The specific authentication.provider needs a descriptor behind `YOUR.PROVIDER\src\main\resources\META-INF\services` with filename
+`de.gematik.ti.fdv.authentication.service.provider.api.IAuthenticator` and the content of the package and class which implements the service provider interface e.g. `de.gematik.ti.epa.fdv.healthcard.authentication.Authenticator`
+
+.File META-INF services
+image::AUTHNSPI/MetaInfServices.png[caption="{figure-caption} {counter:figure}: "]
+
+// end::ServiceProvider[]

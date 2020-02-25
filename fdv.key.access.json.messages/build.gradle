@@ -1,0 +1,134 @@
+/*
+ * Copyright (c) 2020 gematik GmbH
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: "de.gematik.parent"
+apply plugin: "de.gematik.asciidoctor"
+apply plugin: 'org.openapi.generator'
+apply plugin: "de.gematik.publish"
+
+group = 'de.gematik.ti.epa'
+sourceCompatibility = 1.8
+
+description = """ePA Key Access JSON Messages"""
+
+sourceSets {
+    test {
+        java.srcDirs = ['src/test/java']
+        resources.srcDirs = ['src/test/resources']
+        runtimeClasspath = project.sourceSets.main.compileClasspath +
+                project.sourceSets.test.compileClasspath +
+                fileTree("${buildDir}/resources/test") + fileTree("${buildDir}/resources/main") + fileTree("${buildDir}") +
+                project.sourceSets.test.output + project.sourceSets.main.output
+    }
+}
+
+dependencies {
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'org.hamcrest', name: 'hamcrest-all', version: '1.3'
+    testImplementation group: 'org.greenrobot', name: 'eventbus', version: '3.1.1'
+
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+
+    implementation 'io.swagger:swagger-annotations:1.5.22'
+    implementation "com.google.code.findbugs:jsr305:3.0.2"
+    implementation 'com.squareup.okhttp3:okhttp:3.14.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'io.gsonfire:gson-fire:1.8.3'
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.9'
+    testCompile 'junit:junit:4.12'
+}
+
+
+task buildJavaKeyAccessClient(type: org.openapitools.generator.gradle.plugin.tasks.GenerateTask) {
+    generatorName = "java"
+    inputSpec = "$buildDir/../src/main/resources/keyaccess.sgd.yaml".toString()
+    outputDir = "$buildDir/../".toString()
+    apiPackage = "de.gematik.ti.epa.fdv.key.access.gen.api"
+    invokerPackage = "de.gematik.ti.epa.fdv.key.access.gen.invoker"
+    groupId = "de.gematik.ti.epa"
+    modelPackage = "de.gematik.ti.epa.fdv.key.access.gen.model"
+    generateModelTests = true
+    generateApiTests = true
+    generateModelDocumentation = true
+    generateApiDocumentation = true
+
+    configOptions = [
+            dateLibrary            : "java8",
+            java8                  : "true",
+            hideGenerationTimestamp: "true",
+            artifactId             : "fdv.keyaccess.client",
+            artifactDescription    : "Keyaccess-Java"
+    ]
+    systemProperties = [
+            modelDocs: "true"
+    ]
+}
+
+buildJavaKeyAccessClient.doFirst {
+    delete "$projectDir/src/main/java/de/gematik/ti/epa/fdv/key/access/gen/" // Source deletion
+    //delete "$projectDir/src/test/java/de/gematik/ti/epa/fdv/key/access/gen/" // Test deletion
+}
+
+buildJavaKeyAccessClient.doLast {
+    delete "$projectDir/.travis.yml"
+    delete "$projectDir/build.sbt"
+    delete "$projectDir/git_push.sh"
+    delete "$projectDir/gradle.properties"
+    delete "$projectDir/gradlew"
+    delete "$projectDir/gradlew.bat"
+    delete "$projectDir/pom.xml"
+    delete "$projectDir/README.md"
+    delete "$projectDir/.openapi-generator"
+}
+
+task sourceJar(type: Jar) {
+    classifier "sources"
+    from "${project.buildDir}/../src/main/java/"
+    include "**/*.java"
+}
+task testSourceJar(type: Jar) {
+    classifier "test-sources"
+    from "${project.buildDir}/../src/test/java/"
+    include "**/*.java"
+}
+task javadocJar(type: Jar) {
+    classifier "javadoc"
+    from "${project.buildDir}/docs/javadoc/"
+    into "${project.name}"
+}
+
+artifacts {
+    archives sourceJar
+    archives testSourceJar
+    archives javadocJar
+}
+
+gematikDocumentation {
+    projectShortcut = "EKAMSG"
+    plantUmlDestinationFolder = "../docs/plantuml/EKAMSG"
+}
+
+javadoc {
+    failOnError = false
+}
+
+test {
+    //we want display the following test events
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
+    }
+}

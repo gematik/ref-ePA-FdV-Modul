@@ -1,0 +1,50 @@
+@startuml
+
+
+  namespace de.gematik.ti.epa.fdv.authentication.transport {
+      class de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpTransportSe {
+          - wsAddressingImplementation : WSAddressingImplementation
+          + AdvancedHttpTransportSe()
+          + call()
+          + setXmlVersionTag()
+          # createRequestData()
+          # parseResponse()
+      }
+      class de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpsTransportSe {
+                - wsAddressingImplementation : WSAddressingImplementation
+                - xmlVersionTag : String
+                + AdvancedHttpsTransportSe()
+                + call()
+                + setXmlVersionTag()
+                # createRequestData()
+                # parseResponse()
+      }
+
+      class de.gematik.ti.epa.fdv.authentication.transport.SoapDataDelegate {
+                {static} - BUFFER_LENGTH : int
+                - responseString : String
+                - xmlVersionTag : String
+                + SoapDataDelegate()
+                + call()
+                + call()
+                + generateRequestData()
+                + getResponseString()
+                + getServiceConnection()
+                + setXmlVersionTag()
+                ~ createRequestData()
+                ~ parseResponse()
+                - getCharset()
+                - getContentLength()
+                - readInput()
+      }
+
+  }
+
+
+  de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpTransportSe -up-|> com.easywsdl.exksoap2.transport.AdvancedHttpTransportSE
+  de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpTransportSe o-- de.gematik.ti.epa.fdv.authentication.transport.SoapDataDelegate : delegate
+  de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpsTransportSe -up-|> com.easywsdl.exksoap2.transport.AdvancedHttpsTransportSE
+  de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpsTransportSe o-- de.gematik.ti.epa.fdv.authentication.transport.SoapDataDelegate : delegate
+  de.gematik.ti.epa.fdv.authentication.transport.SoapDataDelegate -up-|> org.ksoap2.transport.Transport
+
+@enduml

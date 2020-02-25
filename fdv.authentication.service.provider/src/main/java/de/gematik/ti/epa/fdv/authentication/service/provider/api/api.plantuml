@@ -1,0 +1,23 @@
+@startuml
+
+namespace de.gematik.ti.epa.fdv.authentication.service.provider.provider.api {
+    interface de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.IAuthenticationResult {
+    }
+    interface de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.IAuthenticator {
+    }
+
+    interface de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.ICertificateHolder {
+    }
+
+    namespace entities {
+          class de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.entities.AuthenticationResult {
+          }
+          enum AuthenticationState {
+          }
+    }
+  }
+
+  de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.entities.AuthenticationResult .up.|> de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.IAuthenticationResult
+  de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.entities.AuthenticationResult o-- de.gematik.ti.epa.fdv.authentication.service.provider.provider.api.entities.AuthenticationState : authState
+
+@enduml

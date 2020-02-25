@@ -1,0 +1,86 @@
+/*
+ * Copyright (c) 2020 gematik GmbH
+ * 
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * 
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ * 
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+apply plugin: "de.gematik.parent"
+apply plugin: "de.gematik.asciidoctor"
+apply plugin: "de.gematik.publish"
+
+sourceCompatibility = 1.8
+
+group = 'de.gematik.ti.epa'
+
+description = """ePA FdV Authentication Service Provider"""
+
+sourceSets {
+    test {
+        java.srcDirs = ['src/test/java']
+        resources.srcDirs = ['src/test/resources']
+        runtimeClasspath = project.sourceSets.main.compileClasspath + project.sourceSets.test.compileClasspath + fileTree("${buildDir}/resources/test") + fileTree("${buildDir}/resources/main") + fileTree("${buildDir}") + project.sourceSets.test.output + project.sourceSets.main.output
+    }
+}
+
+gematikDocumentation {
+    projectShortcut = "AUTHNSPI"
+    plantUmlDestinationFolder = "../docs/plantuml/AUTHNSPI"
+}
+
+dependencies {
+    implementation 'org.greenrobot:eventbus:3.1.1'
+    implementation 'org.slf4j:slf4j-api:1.7.25'
+    implementation group: 'de.gematik.ti', name: 'cardreader.access', version: '1.1.2'
+    implementation group: 'de.gematik.ti', name: 'cardreader.provider.api', version: '1.2.1'
+    implementation group: 'de.gematik.ti', name: 'healthcard.access', version: '1.2.1'
+
+    implementation group: 'de.gematik.ti', name: 'utils', version: '1.2.1'
+
+    testImplementation group: 'junit', name: 'junit', version: '4.12'
+    testImplementation group: 'org.sonarsource.java', name: 'sonar-jacoco-listeners', version: '3.8'
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '3.0.0'
+
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.8.1'
+    testImplementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8.1'
+
+
+}
+
+task sourceJar(type: Jar) {
+    classifier "sources"
+    from "${project.buildDir}/../src/main/java/"
+    include "**/*.java"
+}
+task testSourceJar(type: Jar) {
+    classifier "test-sources"
+    from "${project.buildDir}/../src/test/java/"
+    include "**/*.java"
+}
+task javadocJar(type: Jar) {
+    classifier "javadoc"
+    from "${project.buildDir}/docs/javadoc/"
+    into "${project.name}"
+}
+
+artifacts {
+    archives sourceJar
+    archives testSourceJar
+    archives javadocJar
+}
+
+test {
+    //we want display the following test events
+    testLogging {
+        events "PASSED", "STARTED", "FAILED", "SKIPPED"
+    }
+}

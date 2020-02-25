@@ -1,0 +1,118 @@
+@startuml
+
+  namespace de.gematik.ti.epa.fdv.authentication {
+    class de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap {
+            {static} - TIMEOUT : int
+            - assertion : String
+            - isLoginTokenRequest : boolean
+            - isRenewTokenRequest : boolean
+            - requestData : byte[]
+            - securityHeader : SecurityHeaderType
+            - shouldSendRequest : boolean
+            - transport : Transport
+            - uri : URI
+            - url : String
+            - uuid : UUID
+            + AuthenticationBindingSoap()
+            + createEnvelope()
+            + getRequestData()
+            + getUuid()
+            + sendRequest()
+            + setShouldSendRequest()
+            # createTransport()
+    }
+
+    class de.gematik.ti.epa.fdv.authentication.Authn {
+    - authenticationProvider : IAuthenticator
+            - authnProviderSubscriber : Subscriber<IAuthenticator>
+            {static} - instance : Authn
+            - url : URL
+            {static} + getInstance()
+            + loginCreateChallenge()
+            + loginCreateToken()
+            + logoutToken()
+            + renewToken()
+            + setAuthProvider()
+            - Authn()
+            - getAuthnProvider()
+            - initAuthService()
+            - initProviderSubscriber()
+    }
+
+    class de.gematik.ti.epa.fdv.authentication.AuthnService {
+            {static} - TIMEOUT : long
+            - listAuthn : List<IAuthenticator>
+            - selectedAuthnProvider : IAuthenticator
+            + AuthnService()
+            + getAuthenticationProvider()
+            + getAvailableAuthenticationProvider()
+    }
+
+    namespace event {
+          class de.gematik.ti.epa.fdv.authentication.event.AuthnProviderSelectionProvider {
+                    - queue : ArrayBlockingQueue<IAuthenticator>
+                    + call()
+                    + handleSelectedAuthnProvider()
+          }
+
+          interface de.gematik.ti.epa.fdv.authentication.event.IAuthnProviderSelectionListener {
+                    {abstract} + handleSelectedAuthnProvider()
+          }
+
+          class de.gematik.ti.epa.fdv.authentication.event.RequestSelectAuthenticatorEvent {
+          - listAuthn : List<IAuthenticator>
+                    + RequestSelectAuthenticatorEvent()
+                    + RequestSelectAuthenticatorEvent()
+                    + getListAuthn()
+                    + getListener()
+          }
+
+
+    }
+
+    namespace security {
+    }
+
+    namespace serialization {
+          class de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils {
+          }
+
+    }
+
+    namespace soap {
+    }
+
+    namespace transport {
+          class de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpTransportSe {
+          }
+          class de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpsTransportSe {
+          }
+          class de.gematik.ti.epa.fdv.authentication.transport.SoapDataDelegate {
+          }
+    }
+  }
+
+
+  de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap o-- de.gematik.ti.epa.fdv.authentication.transport.SoapDataDelegate
+  de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap o-- de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpTransportSe
+  de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap o-- de.gematik.ti.epa.fdv.authentication.transport.AdvancedHttpsTransportSe
+
+
+  de.gematik.ti.epa.fdv.authentication.Authn o-- de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap
+ de.gematik.ti.epa.fdv.authentication.Authn o-- de.gematik.ti.epa.fdv.authentication.AuthnService
+
+ de.gematik.ti.epa.fdv.authentication.Authn o-- de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils
+ de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap o-- de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils
+
+  de.gematik.ti.epa.fdv.authentication.event.RequestSelectAuthenticatorEvent o-- de.gematik.ti.epa.fdv.authentication.event.IAuthnProviderSelectionListener
+
+ de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils o-- de.gematik.ti.epa.fdv.authentication.soap
+  de.gematik.ti.epa.fdv.authentication.event.AuthnProviderSelectionProvider .up.|> de.gematik.ti.epa.fdv.authentication.event.IAuthnProviderSelectionListener
+de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap .up.|> de.gematik.ti.epa.fdv.gen.authentication.I_Authentication_Insurant_Binding_Soap12
+de.gematik.ti.epa.fdv.authentication.Authn o-- de.gematik.ti.epa.fdv.gen.authentication
+de.gematik.ti.epa.fdv.authentication.AuthenticationBindingSoap o-- de.gematik.ti.epa.fdv.gen.authentication
+
+ de.gematik.ti.epa.fdv.authentication.serialization.AuthnSerializationUtils o-- de.gematik.ti.epa.fdv.authentication.security
+
+de.gematik.ti.epa.fdv.authentication.AuthnService o-- de.gematik.ti.epa.fdv.authentication.event.AuthnProviderSelectionProvider
+@enduml
