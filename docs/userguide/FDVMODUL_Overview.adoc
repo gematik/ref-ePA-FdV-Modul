@@ -41,7 +41,7 @@ endif::useCachePlantuml[]
 ifdef::useCachePlantuml[]
 
 .FdV Authentication structure
-image::authn/generated/authentication.png[caption="{classdia-caption} {counter:class}: "]
+image::AUTHN/generated/authentication.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -62,7 +62,7 @@ endif::useCachePlantuml[]
 ifdef::useCachePlantuml[]
 
 .ePA Authorization structure
-image::authz/generated/authorization.png[caption="{classdia-caption} {counter:class}: "]
+image::AUTHZ/generated/authorization.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -84,7 +84,7 @@ endif::useCachePlantuml[]
 ifdef::useCachePlantuml[]
 
 .ePA Key Access structure
-image::eka/generated/access.png[caption="{classdia-caption} {counter:class}: "]
+image::EKA/generated/access.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -106,7 +106,7 @@ ifdef::useCachePlantuml[]
 
 
 .FdV Session Handler structure
-image::esh/generated/handler.png[caption="{classdia-caption} {counter:class}: "]
+image::ESH/generated/handler.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -127,7 +127,7 @@ ifdef::useCachePlantuml[]
 
 
 .ePA Service Localization API
-image::elsapi/generated/api.png[caption="{classdia-caption} {counter:class}: "]
+image::ESLAPI/generated/api.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -152,7 +152,7 @@ ifdef::useCachePlantuml[]
 
 
 .IServiceLocalizer
-image::elsapi/generated/spi.png[caption="{classdia-caption} {counter:class}: "]
+image::ESLAPI/generated/spi.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -163,7 +163,7 @@ The specific service localization needs a descriptor behind `YOUR.service.locali
 `de.gematik.ti.fdv.epa.service.localization.spi.IServiceLocalizer` and the content of the package and class which implements the service localizer interface e.g. `de.gematik.ti.fdv.epa.service.localization.ServiceLocator`
 
 .File META-INF services
-image::eslapi/generated/MetaInfServices.png[caption="{figure-caption} {counter:figure}: "]
+image::ESLAPI/MetaInfServices.png[caption="{figure-caption} {counter:figure}: "]
 
 ==== ServiceInterfaceName
 // tag::ServiceInterfaceName[]
@@ -177,7 +177,7 @@ Status of service lookup in DNS - As long as the Service lookup is running, thus
 ifndef::useCachePlantuml[]
 
 .ServiceInterfaceName / LookupStatus
-[plantuml,eslapi/generated/api,png,caption="{classdia-caption} {counter:class}: "]
+[plantuml,ESLAPI/generated/api,png,caption="{classdia-caption} {counter:class}: "]
 ----
 include::{plantumldir}/ESLAPI/api.plantuml[]
 ----
@@ -187,7 +187,7 @@ ifdef::useCachePlantuml[]
 
 
 .ServiceInterfaceName / LookupStatus
-image::eslapi/generated/api.png[caption="{classdia-caption} {counter:class}: "]
+image::ESLAPI/generated/api.png[caption="{classdia-caption} {counter:class}: "]
 
 {empty} +
 
@@ -199,7 +199,7 @@ endif::useCachePlantuml[]
 ifndef::useCachePlantuml[]
 
 .ePA Authentication Service Provider
-[plantuml,authnspi/generated/fdv.authentication.service.provider,png,caption="{classdia-caption} {counter:class}: ",650]
+[plantuml,AUTHNSPI/generated/fdv.authentication.service.provider,png,caption="{classdia-caption} {counter:class}: ",650]
 ----
 include::{plantumldir}/AUTHNSPI/fdv.authentication.service.provider.plantuml[]
 ----

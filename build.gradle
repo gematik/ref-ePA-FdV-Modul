@@ -56,36 +56,6 @@ dependencies {
 
 }
 
-task sourceJar(type: Jar) {
-    archiveClassifier.set("sources")
-    from "${project.buildDir}/../src/main/java/"
-    include "**/*.java"
-}
-task testSourceJar(type: Jar) {
-    archiveClassifier.set("test-sources")
-    from "${project.buildDir}/../src/test/java/"
-    include "**/*.java"
-}
-task adocJar(type: Jar) {
-    archiveClassifier.set("adoc")
-    from "${project.buildDir}/../docs"
-    into "${project.name}"
-    exclude "**/generated/**/*.*"
-
-}
-task javadocJar(type: Jar) {
-    archiveClassifier.set("javadoc")
-    from "${project.buildDir}/../javadoc/"
-    into "${project.name}"
-}
-
-artifacts {
-    archives sourceJar
-    archives testSourceJar
-    archives adocJar
-    archives javadocJar
-}
-
 gematikDocumentation {
     projectShortcut = "FDVMODUL"
     plantUmlDestinationFolder = "docs/plantuml/FDVMODUL"
