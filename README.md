@@ -117,7 +117,7 @@ To use ePA FdV Modul library in a project, you need just to include following de
 **Gradle dependency settings to use ePA FdV Modul library.**
 
     dependencies {
-        implementation group: 'de.gematik.ti.epa', name: 'fdv.authentication', version: '1.0.2'
+        implementation group: 'de.gematik.ti.epa', name: 'fdv.authentication', version: '1.0.3'
     }
 
 **Maven dependency settings to use ePA FdV Modul library.**
@@ -126,6 +126,6 @@ To use ePA FdV Modul library in a project, you need just to include following de
         <dependency>
             <groupId>de.gematik.ti.epa</groupId>
             <artifactId>fdv.authentication</artifactId>
-            <version>1.0.2</version>
+            <version>1.0.3</version>
         </dependency>
     </dependencies>

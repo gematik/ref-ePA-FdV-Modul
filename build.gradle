@@ -84,13 +84,15 @@ task cleanAcrossJavadoc(type: GradleBuild) {
     tasks = ['clean']
 }
 
-sonarqube {
-    properties {
-        property 'sonar.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-        property 'sonar.coverage.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-        property 'sonar.cpd.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-        property 'sonar.test.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-    }
+if (!project.buildscript.configurations.getByName("classpath").filter { a -> a.toString().contains("org.sonarsource.scanner.gradle") }.isEmpty()) {
+	sonarqube {
+		properties {
+			property 'sonar.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+			property 'sonar.coverage.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+			property 'sonar.cpd.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+			property 'sonar.test.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+		}
+	}
 }
 
 javadoc.finalizedBy generateAcrossJavadoc
