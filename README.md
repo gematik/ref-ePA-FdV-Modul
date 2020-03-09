@@ -94,7 +94,7 @@ Status of service lookup in DNS - As long as the Service lookup is running, thus
 
   
 
-### Authentication Service Provider Interface
+#### Authentication Service Provider Interface
 
 The entry point for the ServiceLoader is the Authentication Service Provider Interface.
 This Interface returns the specific authentication provider implementation and a provider description.
@@ -127,5 +127,125 @@ To use ePA FdV Modul library in a project, you need just to include following de
             <groupId>de.gematik.ti.epa</groupId>
             <artifactId>fdv.authentication</artifactId>
             <version>1.0.3</version>
+        </dependency>
+    </dependencies>
+
+### Build setup Authentication
+
+To use ePA Authentication library in a project, you need just to include following dependency:
+
+**Gradle dependency settings to use ePA Authentication library.**
+
+    dependencies {
+        implementation group: 'de.gematik.ti.epa', name: 'fdv.authentication', version: '{version_FDVMODUL}'
+    }
+
+**Maven dependency settings to use ePA Authentication library.**
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gematik.ti.epa</groupId>
+            <artifactId>fdv.authentication</artifactId>
+            <version>{version_FDVMODUL}</version>
+        </dependency>
+    </dependencies>
+
+### Build setup Authorization
+
+To use ePA Authorization library in a project, you need just to include following dependency:
+
+**Gradle dependency settings to use ePA Authorization library.**
+
+    dependencies {
+        implementation group: 'de.gematik.ti.epa', name: 'fdv.authorization', version: '{version_FDVMODUL}'
+    }
+
+**Maven dependency settings to use ePA Authorization library.**
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gematik.ti.epa</groupId>
+            <artifactId>fdv.authorization</artifactId>
+            <version>{version_FDVMODUL}</version>
+        </dependency>
+    </dependencies>
+
+### Build setup Key Access
+
+To use Key Access library in a project, you need just to include following dependency:
+
+**Gradle dependency settings to use Key Access library.**
+
+    dependencies {
+        implementation group: 'de.gematik.ti.epa', name: 'fdv.key.access', version: '{version_FDVMODUL}'
+    }
+
+**Maven dependency settings to use Key Access library.**
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gematik.ti.epa</groupId>
+            <artifactId>fdv.key.access</artifactId>
+            <version>{version_FDVMODUL}</version>
+        </dependency>
+    </dependencies>
+
+### Build setup Session Handler
+
+To use ePA Session Handler library in a project, you need just to include following dependency:
+
+**Gradle dependency settings to use ePA Session Handler library.**
+
+    dependencies {
+        implementation group: 'de.gematik.ti.epa', name: 'fdv.session.handler', version: '{version_FDVMODUL}'
+    }
+
+**Maven dependency settings to use ePA Session Handler library.**
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gematik.ti.epa</groupId>
+            <artifactId>fdv.session.handler</artifactId>
+            <version>{version_FDVMODUL}</version>
+        </dependency>
+    </dependencies>
+
+### Build setup Service Localization API
+
+To use ePA Service Localization API library in a project, you need just to include following dependency:
+
+**Gradle dependency settings to use ePA Service Localization API library.**
+
+    dependencies {
+        implementation group: 'de.gematik.ti.epa', name: 'fdv.service.localization.api', version: '{version_FDVMODUL}'
+    }
+
+**Maven dependency settings to use ePA Service Localization API library.**
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gematik.ti.epa</groupId>
+            <artifactId>fdv.service.localization.api</artifactId>
+            <version>{version_FDVMODUL}</version>
+        </dependency>
+    </dependencies>
+
+### Build setup Authentication Service Provider
+
+To use Authentication Service Provider library in a project, you need just to include following dependency:
+
+**Gradle dependency settings to use Authentication Service Provider library.**
+
+    dependencies {
+        implementation group: 'de.gematik.ti.epa', name: fdv.'authentication.service.provider', version: '{version_FDVMODUL}'
+    }
+
+**Maven dependency settings to use Authentication Service Provider library.**
+
+    <dependencies>
+        <dependency>
+            <groupId>de.gematik.ti.epa</groupId>
+            <artifactId>fdv.authentication.service.provider</artifactId>
+            <version>{version_FDVMODUL}</version>
         </dependency>
     </dependencies>

@@ -16,7 +16,7 @@
 
 buildscript {
     dependencies {
-        classpath "de.gematik:gematik-parent-plugin:1.2.0"
+        classpath "de.gematik:gematik-parent-plugin:1.2.1"
         classpath "de.gematik:documentation-plugin:1.1.2"
         classpath "org.openapitools:openapi-generator-gradle-plugin:4.1.1"
     }
@@ -85,14 +85,14 @@ task cleanAcrossJavadoc(type: GradleBuild) {
 }
 
 if (!project.buildscript.configurations.getByName("classpath").filter { a -> a.toString().contains("org.sonarsource.scanner.gradle") }.isEmpty()) {
-	sonarqube {
-		properties {
-			property 'sonar.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-			property 'sonar.coverage.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-			property 'sonar.cpd.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-			property 'sonar.test.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
-		}
-	}
+    sonarqube {
+        properties {
+            property 'sonar.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+            property 'sonar.coverage.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+            property 'sonar.cpd.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+            property 'sonar.test.exclusions', "**/gen/**/*,**/generatedfromwsdl/**/*"
+        }
+    }
 }
 
 javadoc.finalizedBy generateAcrossJavadoc

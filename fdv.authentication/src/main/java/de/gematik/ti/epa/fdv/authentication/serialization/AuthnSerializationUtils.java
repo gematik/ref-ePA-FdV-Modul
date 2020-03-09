@@ -136,7 +136,8 @@ public final class AuthnSerializationUtils {
         final SignatureInfoSignature signedSignatureInfo;
 
         try {
-            ((Element) docToSign.getElementsByTagName("soap:Body").item(0)).setIdAttribute("wsu:Id", true);
+            final Element bodyEl = ((Element) docToSign.getElementsByTagName("soap:Body").item(0));
+            bodyEl.setIdAttribute("WSU:Id", true);
             final XMLSignature sig = new XMLSignature(docToSign, "", XMLSignature.ALGO_ID_SIGNATURE_RSA_SHA256,
                     Transforms.TRANSFORM_C14N_EXCL_OMIT_COMMENTS);
             docToSign.getElementsByTagName("soap:Header").item(0).appendChild(sig.getElement());

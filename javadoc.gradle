@@ -16,7 +16,7 @@
 
 buildscript {
     dependencies {
-        classpath "de.gematik:gematik-parent-plugin:1.1.3"
+        classpath "de.gematik:gematik-parent-plugin:1.2.1"
         classpath "de.gematik:documentation-plugin:1.1.2"
     }
 }

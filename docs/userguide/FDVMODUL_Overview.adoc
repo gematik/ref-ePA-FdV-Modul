@@ -32,7 +32,7 @@ The AuthenticationBindingSoap class forms the entry point for establishing the c
 ifndef::useCachePlantuml[]
 
 .FdV Authentication structure
-[plantuml,authn/generated/authentication,png,caption="{classdia-caption} {counter:class}: ",650]
+[plantuml,AUTHN/generated/authentication,png,caption="{classdia-caption} {counter:class}: ",650]
 ----
 include::{plantumldir}/AUTHN/authentication.plantuml[]
 ----
@@ -53,7 +53,7 @@ The authorization module is not yet implemented
 ifndef::useCachePlantuml[]
 
 .ePA Authorization structure
-[plantuml,authz/generated/authorization,png,caption="{classdia-caption} {counter:class}: ",650]
+[plantuml,AUTHZ/generated/authorization,png,caption="{classdia-caption} {counter:class}: ",650]
 ----
 include::{plantumldir}/AUTHZ/authorization.plantuml[]
 ----
@@ -75,7 +75,7 @@ The key access module is not yet implemented
 ifndef::useCachePlantuml[]
 
 .ePA Key Access structure
-[plantuml,eka/generated/access,png,caption="{classdia-caption} {counter:class}: ",650]
+[plantuml,EKA/generated/access,png,caption="{classdia-caption} {counter:class}: ",650]
 ----
 include::{plantumldir}/EKA/access.plantuml[]
 ----
@@ -96,7 +96,7 @@ The FdV SessionHandler module provides a ServiceLocalizerLoader for available se
 ifndef::useCachePlantuml[]
 
 .FdV Session Handler structure
-[plantuml,esh/generated/handler,png,caption="{classdia-caption} {counter:class}: ",650]
+[plantuml,ESH/generated/handler,png,caption="{classdia-caption} {counter:class}: ",650]
 ----
 include::{plantumldir}/ESH/handler.plantuml[]
 ----
@@ -215,7 +215,7 @@ image::AUTHNSPI/generated/fdv.authentication.service.provider.png[caption="{clas
 
 endif::useCachePlantuml[]
 
-=== Authentication Service Provider Interface
+==== Authentication Service Provider Interface
 // tag::ServiceProvider[]
 
 The entry point for the ServiceLoader is the Authentication Service Provider Interface.

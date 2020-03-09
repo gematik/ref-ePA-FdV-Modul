@@ -1,3 +1,6 @@
+# Release 1.0.4
+Bugfix: Authentication Modul (signDocument)
+
 # Release 1.0.3
 - update UML diagrams
 
