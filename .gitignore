@@ -74,5 +74,3 @@ settings.properties
 gradle/
 src/test/**/*.plantuml
 docs/userguide/.asciidoctor
-.asciidoctor/
-javadoc/

@@ -18,12 +18,9 @@ ifndef::globalConfig[]
 
 // where are images located?
 :imagesdir: docs/images
-:imagesoutdir: docs/images/
+:imagesoutdir: docs/images
 :testdir: ../../src/test/java/de/gematik/ti
 :sourcedir: /src/main/java/de/gematik/ti
-:plantumldir: ../plantuml
-
-
-
+:plantumldir: docs/plantuml
 
 endif::globalConfig[]
