@@ -1,3 +1,6 @@
+# Release 1.0.6
+updade doku
+
 # Release 1.0.5
 - update adoc
 

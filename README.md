@@ -126,7 +126,7 @@ To use ePA FdV Modul library in a project, you need just to include following de
         <dependency>
             <groupId>de.gematik.ti.epa</groupId>
             <artifactId>fdv.authentication</artifactId>
-            <version>1.0.5</version>
+            <version>1.0.6</version>
         </dependency>
     </dependencies>
 
