@@ -1,3 +1,6 @@
+# Release 1.0.7
+- supplement documentation
+
 # Release 1.0.6
 updade doku
 

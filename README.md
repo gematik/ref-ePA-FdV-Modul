@@ -27,7 +27,7 @@ All available IAuthenticator and the selected one will be returned by the AuthnS
 The Authn class enforces required operations (login create challenge / login create token / renew token / logout token) according to ws-Trust to authenticate the user.
 The AuthenticationBindingSoap class forms the entry point for establishing the connection to the authentication web service.
 
-![FdV Authentication structure](docs/images/AUTHN/generated/authentication.png)
+![FdV Authentication structure](docs/images/FDVMODUL_AUTHN/generated/authentication.png)
 
   
 
@@ -35,7 +35,7 @@ The AuthenticationBindingSoap class forms the entry point for establishing the c
 
 The authorization module is not yet implemented
 
-![ePA Authorization structure](docs/images/AUTHZ/generated/authorization.png)
+![ePA Authorization structure](docs/images/FDVMODUL_AUTHZ/generated/authorization.png)
 
   
 
@@ -43,7 +43,7 @@ The authorization module is not yet implemented
 
 The key access module is not yet implemented
 
-![ePA Key Access structure](docs/images/EKA/generated/access.png)
+![ePA Key Access structure](docs/images/FDVMODUL_EKA/generated/access.png)
 
   
 
@@ -51,13 +51,13 @@ The key access module is not yet implemented
 
 The FdV SessionHandler module provides a ServiceLocalizerLoader for available service localization services.
 
-![FdV Session Handler structure](docs/images/ESH/generated/handler.png)
+![FdV Session Handler structure](docs/images/FDVMODUL_ESH/generated/handler.png)
 
   
 
 ### Service Localization API
 
-![ePA Service Localization API](docs/images/ESLAPI/generated/api.png)
+![ePA Service Localization API](docs/images/FDVMODUL_ESLAPI/generated/api.png)
 
   
 
@@ -67,14 +67,14 @@ Interface to be implemented by service localizer as entry point to localize ePA 
 Start lookup DNS for retrieving endpoint URLs of various ePA gateway services.
 Once lookup has been done successfully, endpoint URLs for interfaces in ServiceInterfaceName can be retrieved.
 
-![IServiceLocalizer](docs/images/ESLAPI/generated/spi.png)
+![IServiceLocalizer](docs/images/FDVMODUL_ESLAPI/generated/spi.png)
 
   
 
 The specific service localization needs a descriptor behind `YOUR.service.localization\src\main\resources\META-INF\services` with filename
 `de.gematik.ti.fdv.epa.service.localization.spi.IServiceLocalizer` and the content of the package and class which implements the service localizer interface e.g. `de.gematik.ti.fdv.epa.service.localization.ServiceLocator`
 
-![File META-INF services](docs/images/ESLAPI/MetaInfServices.png)
+![File META-INF services](docs/images/FDVMODUL_ESLAPI/MetaInfServices.png)
 
 #### ServiceInterfaceName
 
@@ -84,13 +84,13 @@ Description of the service interfaces and assignments of paths to the ePA file s
 
 Status of service lookup in DNS - As long as the Service lookup is running, thus it might still in progress after ServiceLocatorType object has been initialized, or lookup was not successful for some reason, e.g. DNS was not accessible
 
-![ServiceInterfaceName / LookupStatus](docs/images/ESLAPI/generated/api.png)
+![ServiceInterfaceName / LookupStatus](docs/images/FDVMODUL_ESLAPI/generated/api.png)
 
   
 
 ### Authentication Service Provider
 
-![ePA Authentication Service Provider](docs/images/AUTHNSPI/generated/fdv.authentication.service.provider.png)
+![ePA Authentication Service Provider](docs/images/FDVMODUL_AUTHNSPI/generated/fdv.authentication.service.provider.png)
 
   
 
@@ -99,14 +99,14 @@ Status of service lookup in DNS - As long as the Service lookup is running, thus
 The entry point for the ServiceLoader is the Authentication Service Provider Interface.
 This Interface returns the specific authentication provider implementation and a provider description.
 
-![IAuthenticationProvider](docs/images/AUTHNSPI/generated/spi.png)
+![IAuthenticationProvider](docs/images/FDVMODUL_AUTHNSPI/generated/spi.png)
 
   
 
 The specific authentication.provider needs a descriptor behind `YOUR.PROVIDER\src\main\resources\META-INF\services` with filename
 `de.gematik.ti.fdv.authentication.service.provider.api.IAuthenticator` and the content of the package and class which implements the service provider interface e.g. `de.gematik.ti.epa.fdv.healthcard.authentication.Authenticator`
 
-![File META-INF services](docs/images/AUTHNSPI/MetaInfServices.png)
+![File META-INF services](docs/images/FDVMODUL_AUTHNSPI/MetaInfServices.png)
 
 ## Getting Started
 
@@ -126,7 +126,7 @@ To use ePA FdV Modul library in a project, you need just to include following de
         <dependency>
             <groupId>de.gematik.ti.epa</groupId>
             <artifactId>fdv.authentication</artifactId>
-            <version>1.0.6</version>
+            <version>1.0.7</version>
         </dependency>
     </dependencies>
 

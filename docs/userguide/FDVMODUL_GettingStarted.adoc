@@ -18,6 +18,6 @@ dependencies {
     <dependency>
         <groupId>de.gematik.ti.epa</groupId>
         <artifactId>fdv.authentication</artifactId>
-        <version>1.0.6</version>
+        <version>1.0.7</version>
     </dependency>
 </dependencies>
